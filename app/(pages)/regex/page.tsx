@@ -1,47 +1,39 @@
 "use client"
-import { useState } from "react"
+import { use, useState } from "react"
+import Link from "next/link"
 import { formatCapitalizeAllWords } from "@/app/functions/capitalize"
-import { GoDotFill } from "react-icons/go"
 import FilterBox from "@/app/app_Components/filterBox"
 
-const forms = [
-	"basic form",
-	"sign in",
-	"sign up",
-	"forgot password",
-	"change password",
-	"change email",
-	"change username",
-	"delete account",
-	"delete user",
-]
+// icons
+import { GoDotFill } from "react-icons/go"
 
-export default function Forms() {
-	const [pickedFormType, setpickedFormType] = useState("")
+const categories = ["genFormatting", "replace"]
+
+export default function Regex() {
+	const [pickedInputType, setPickedInputType] = useState("")
 	const [libFilters, setLibFilters] = useState([])
 
 	return (
 		<>
-			<h1 className="text-4xl text-center pb-10">Forms Collection</h1>
+			<h1 className="text-4xl text-center pb-10">Regex Collection</h1>
 			<div className="flex items-start justify-between w-full h-auto  gap-4 min-h-screen">
 				<section id="left-nav" className="flex flex-col items-start bg-zinc-300 rounded-lg h-screen w-fit p-6">
-					<h2 className="text-3xl text-left p-1 font-bold text-teal-600">Forms</h2>
-
-					<ul className="flex flex-col items-start justify-between text-xl text-zinc-700 w-full gap-4 pt-7 ml-6 pr-4">
-						{forms.map((link) => {
+					<h2 className="text-3xl text-left p-1 font-bold text-teal-600">Components</h2>
+					<ul className="flex flex-col items-start justify-between text-xl text-zinc-700 gap-4 pt-7 w-full ">
+						{categories.map((link) => {
 							const formattedlink = formatCapitalizeAllWords(link)
 							return (
-								<li key={formattedlink} className="w-full group ">
+								<li key={formattedlink} className="w-full group ml-6 pr-4">
 									<button
-										onClick={() => setpickedFormType(formattedlink)}
-										className="h-full  w-full text-left  rounded p-2 text-xl ">
+										onClick={() => setPickedInputType(formattedlink)}
+										className="h-full  w-full text-left  rounded p-2 text-xl duration-300 transition-all">
 										<span
 											className={`${
-												pickedFormType === formattedlink
+												pickedInputType === formattedlink
 													? "text-teal-500 font-semibold -ml-6"
 													: "group-hover:text-teal-600 group-hover:font-semibold"
 											} whitespace-nowrap flex items-center gap-1`}>
-											{pickedFormType === formattedlink && (
+											{pickedInputType === formattedlink && (
 												<span className="text-teal-400/20">
 													<GoDotFill />
 												</span>
@@ -54,24 +46,24 @@ export default function Forms() {
 						})}
 					</ul>
 				</section>
+
 				<div className="flex flex-col gap-6 w-full">
-					<FilterBox filters={libFilters} setFilters={setLibFilters} library="components" />
 					<section
 						id="component-display"
-						className="flex flex-col w-full justify-between bg-zinc-200 rounded-lg items-start h-screen">
+						className="flex flex-col w-full justify-between bg-zinc-200 rounded-lg items-start h-auto">
 						<div className="flex flex-col items-start h-screen px-6 py-2 w-full">
-							<div className="flex w-full items-center justify-between">
+							<div className="flex  justify-between w-full items-center ">
 								<p className="text-3xl text-left py-5 w-fit whitespace-nowrap">
-									Forms:{" "}
+									Components:{" "}
 									<span className="text-zinc-400">
-										{pickedFormType ? pickedFormType : "Viewing All"}
-										{pickedFormType ? " Forms" : ""}
+										{pickedInputType ? pickedInputType : "Viewing All"}
+										{pickedInputType ? (pickedInputType === "Checkbox" ? "'s" : "s") : ""}
 									</span>
 								</p>
-								{pickedFormType && (
+								{pickedInputType && (
 									<button
-										onClick={() => setpickedFormType("")}
-										className={` text-zinc-100 rounded-lg p-2 h-fit align-center bg-zinc-800 hover:bg-zinc-900 hover:text-lime-500 px-3`}>
+										onClick={() => setPickedInputType("")}
+										className={` text-zinc-900 rounded-lg p-2 h-fit align-center bg-zinc-100 hover:bg-zinc-50 hover:text-teal-500 px-3`}>
 										View All
 									</button>
 								)}

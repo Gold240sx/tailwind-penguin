@@ -4,31 +4,21 @@ import { formatCapitalizeAllWords } from "@/app/functions/capitalize"
 import { GoDotFill } from "react-icons/go"
 import FilterBox from "@/app/app_Components/filterBox"
 
-const forms = [
-	"basic form",
-	"sign in",
-	"sign up",
-	"forgot password",
-	"change password",
-	"change email",
-	"change username",
-	"delete account",
-	"delete user",
-]
+const links = ["input", "checkbox", "radio", "select", "toggle", "progress", "date"]
 
-export default function Forms() {
+export default function Inputs() {
 	const [pickedFormType, setpickedFormType] = useState("")
 	const [libFilters, setLibFilters] = useState([])
 
 	return (
 		<>
-			<h1 className="text-4xl text-center pb-10">Forms Collection</h1>
+			<h1 className="text-4xl text-center pb-10">Inputs Collection</h1>
 			<div className="flex items-start justify-between w-full h-auto  gap-4 min-h-screen">
 				<section id="left-nav" className="flex flex-col items-start bg-zinc-300 rounded-lg h-screen w-fit p-6">
-					<h2 className="text-3xl text-left p-1 font-bold text-teal-600">Forms</h2>
+					<h2 className="text-3xl text-left p-1 font-bold text-teal-600">Inputs</h2>
 
 					<ul className="flex flex-col items-start justify-between text-xl text-zinc-700 w-full gap-4 pt-7 ml-6 pr-4">
-						{forms.map((link) => {
+						{links.map((link) => {
 							const formattedlink = formatCapitalizeAllWords(link)
 							return (
 								<li key={formattedlink} className="w-full group ">
@@ -62,7 +52,7 @@ export default function Forms() {
 						<div className="flex flex-col items-start h-screen px-6 py-2 w-full">
 							<div className="flex w-full items-center justify-between">
 								<p className="text-3xl text-left py-5 w-fit whitespace-nowrap">
-									Forms:{" "}
+									Inputs:{" "}
 									<span className="text-zinc-400">
 										{pickedFormType ? pickedFormType : "Viewing All"}
 										{pickedFormType ? " Forms" : ""}

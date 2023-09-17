@@ -5,6 +5,5 @@
 
 
 body {
-  color: white;
-  @apply bg-zinc-100
+  @apply bg-zinc-100 text-zinc-800
 }

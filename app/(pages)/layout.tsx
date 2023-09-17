@@ -1,6 +1,7 @@
 // import { createServerComponentClient } from "@supabase/supabase-js"
 import Navbar from "@/app/app_Components/nav"
 import Footer from "../app_Components/footer/Footer"
+import { useState } from "react"
 import { cookies } from "next/headers"
 import { cache } from "react"
 
@@ -9,10 +10,10 @@ export default async function HomeLayout({ children }: { children: any }) {
 	// const { data }: { data: { session: null | { user: any } } } = await supabase.auth.getSession()
 
 	return (
-		<div className="py-14">
+		<div className="pt-14">
 			{/* <Navbar user={data?.session?.user} /> */}
 			<Navbar />
-			<div className="min-h-screen p-10">{children}</div>
+			<div className="min-h-screen px-10 pb-14">{children}</div>
 			<Footer />
 		</div>
 	)

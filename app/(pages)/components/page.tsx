@@ -1,7 +1,8 @@
 "use client"
-import { useState } from "react"
+import { use, useState } from "react"
 import Link from "next/link"
 import { formatCapitalizeAllWords } from "@/app/functions/capitalize"
+import FilterBox from "@/app/app_Components/filterBox"
 
 // icons
 import { GoDotFill } from "react-icons/go"
@@ -10,6 +11,16 @@ const links = ["button", "checkbox", "input", "modal", "navbar", "radio", "selec
 
 export default function Components() {
 	const [pickedInputType, setPickedInputType] = useState("")
+	const [libFilters, setLibFilters] = useState([
+		"tailwind",
+		"tailwindUI",
+		"flowbite",
+		"daisyUI",
+		"tailwind elements",
+		"shad cn",
+		"react-select",
+	])
+
 	return (
 		<>
 			<h1 className="text-4xl text-center pb-10">Component Collection</h1>
@@ -28,7 +39,7 @@ export default function Components() {
 											className={`${
 												pickedInputType === formattedlink
 													? "text-teal-500 font-semibold -ml-6"
-													: "group-hover:text-white group-hover:underline "
+													: "group-hover:text-teal-600 group-hover:font-semibold"
 											} whitespace-nowrap flex items-center gap-1`}>
 											{pickedInputType === formattedlink && (
 												<span className="text-teal-400/20">
@@ -43,32 +54,36 @@ export default function Components() {
 						})}
 					</ul>
 				</section>
-				<section
-					id="component-display"
-					className="flex flex-col w-full justify-between bg-zinc-200 rounded-lg items-start h-screen">
-					<div className="flex flex-col items-start h-screen px-6 py-2 w-full">
-						<div className="flex  justify-between w-full items-center ">
-							<p className="text-3xl text-left py-5 w-fit whitespace-nowrap">
-								Components:{" "}
-								<span className="text-zinc-400">
-									{pickedInputType ? pickedInputType : "Viewing All"}
-									{pickedInputType ? (pickedInputType === "Checkbox" ? "'s" : "s") : ""}
-								</span>
-							</p>
-							{pickedInputType && (
-								<button
-									onClick={() => setPickedInputType("")}
-									className={` text-zinc-900 rounded-lg p-2 h-fit align-center bg-zinc-100 hover:bg-zinc-50 hover:text-teal-500 px-3`}>
-									View All
-								</button>
-							)}
+
+				<div className="flex flex-col gap-6 w-full">
+					<FilterBox filters={libFilters} setFilters={setLibFilters} library="components" />
+					<section
+						id="component-display"
+						className="flex flex-col w-full justify-between bg-zinc-200 rounded-lg items-start h-auto">
+						<div className="flex flex-col items-start h-screen px-6 py-2 w-full">
+							<div className="flex  justify-between w-full items-center ">
+								<p className="text-3xl text-left py-5 w-fit whitespace-nowrap">
+									Components:{" "}
+									<span className="text-zinc-400">
+										{pickedInputType ? pickedInputType : "Viewing All"}
+										{pickedInputType ? (pickedInputType === "Checkbox" ? "'s" : "s") : ""}
+									</span>
+								</p>
+								{pickedInputType && (
+									<button
+										onClick={() => setPickedInputType("")}
+										className={` text-zinc-900 rounded-lg p-2 h-fit align-center bg-zinc-100 hover:bg-zinc-50 hover:text-teal-500 px-3`}>
+										View All
+									</button>
+								)}
+							</div>
+							<div className=" w-full">
+								<hr className="w-full border-lime-600" />
+							</div>
+							<ul className="flex flex-col items-start"></ul>
 						</div>
-						<div className=" w-full">
-							<hr className="w-full border-lime-600" />
-						</div>
-						<ul className="flex flex-col items-start"></ul>
-					</div>
-				</section>
+					</section>
+				</div>
 			</div>
 		</>
 	)
