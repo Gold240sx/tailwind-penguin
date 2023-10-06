@@ -30,49 +30,53 @@ const FilterCollection = ({ filters, setFilters, library }: FilterBoxProps) => {
 
 	return (
 		<>
-			{library === "components" &&
-				libraries.map((lib) => {
-					return (
-						<div className="h-10 w-10 cursor-pointer rounded-md overflow-hidden" onClick={handleClick}>
-							<Image src={lib.logo} alt={lib.brand} className="h-10 w-10" height={12} width={12} />
-						</div>
-					)
-				})}
-			{library === "icons" &&
-				iconLibraries.map((lib) => {
-					return (
-						<div key={lib.brand} className="h-10 w-10 cursor-pointer" onClick={handleClick}>
-							<Tooltip
-								// id={`tooltip-${lib.brand}`}
+			{
+				library === "components" &&
+					libraries.map((lib) => {
+						return (
+							<div className="w-10 h-10 overflow-hidden rounded-md cursor-pointer" onClick={handleClick}>
+								<Image src={lib.logo} alt={lib.brand} className="w-10 h-10" height={12} width={12} />
+							</div>
+						)
+					})
+			}
+			{
+				library === "icons" &&
+					iconLibraries.map((lib) => {
+						return (
+							<div key={lib.brand} className="w-10 h-10 cursor-pointer" onClick={handleClick}>
+								<Tooltip
+									// id={`tooltip-${lib.brand}`}
 
-								role="tooltip"
-								trigger="hover"
-								className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-800"
-								content={"lib.brand"}
-								arrow={true}>
-								<Image
-									// data-tooltip-target={`tooltip-${lib.brand}`}
-									src={lib.logo}
-									alt={lib.brand}
-									className={` ${filters?.includes(lib.brand) ? "" : "grayscale opacity-80"} h-10 w-10`}
-									height={12}
-									width={12}
-								/>
-							</Tooltip>
-						</div>
-					)
-				})}
+									role="tooltip"
+									trigger="hover"
+									className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-800"
+									content={"lib.brand"}
+									arrow={true}>
+									<Image
+										// data-tooltip-target={`tooltip-${lib.brand}`}
+										src={lib.logo}
+										alt={lib.brand}
+										className={` ${filters?.includes(lib.brand) ? "" : "grayscale opacity-80"} h-10 w-10`}
+										height={12}
+										width={12}
+									/>
+								</Tooltip>
+							</div>
+						)
+					})
+			}
 
 			{library === "fonts" &&
 				fontLibraries.map((lib) => {
 					return (
-						<div className="h-10 w-10 cursor-pointer" onClick={handleClick}>
+						<div className="w-12 h-12 cursor-pointer" onClick={handleClick}>
 							<Image
 								src={lib.logo}
 								alt={lib.brand}
-								className={` ${filters?.includes(lib.brand) ? "" : "grayscale opacity-60"} h-10 w-10`}
-								height={12}
-								width={12}
+								className={` ${filters?.includes(lib.brand) ? "" : "grayscale opacity-60"} h-12 w-12`}
+								height={75}
+								width={75}
 							/>
 						</div>
 					)

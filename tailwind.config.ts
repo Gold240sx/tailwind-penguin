@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import Highlight from "react-highlight"
 
 const config: Config = {
 	content: [
@@ -17,6 +18,6 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [require("flowbite/plugin")],
+	plugins: [require("flowbite/plugin"), require("highlight.js")],
 }
 export default config

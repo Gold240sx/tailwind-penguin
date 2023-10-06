@@ -15,6 +15,10 @@ import CDNFontsIcon from "../assets/logos/cdnFonts-logo.png"
 import ReactSelectLogo from "../assets/logos/reactSelect-logo.png"
 import ReactSuiteLogo from "../assets/logos/rSuite-logo.png"
 import HyperUILogo from "../assets/logos/hyperUI-logo.png"
+import TailsparkLogo from "../assets/logos/Tailspark-icon.jpg"
+import TailsparkFullLogo from "../assets/logos/TailsparkFull-logo.jpg"
+import IconFinderLogo from "../assets/logos/iconFinder-logo.webp"
+import SweetAlertLogo from "../assets/logos/sweetAlert-logo.png"
 
 export const libraries = [
 	{
@@ -23,6 +27,7 @@ export const libraries = [
 		description: `Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.`,
 		logo: TailwindLogo,
 		frameworkCompatibility: ["React", "Next", "Vue", "Angular", "Svelte", "Alpine.js", "Ember.js", "Blazor", "Laravel", "Django"],
+		install: `install tailwindcss`,
 	},
 	{
 		brand: "Tailwind UI",
@@ -32,6 +37,7 @@ export const libraries = [
 		logo: TailwindUILogo,
 		premiumAccess: true,
 		frameworkCompatibility: ["React", "Next", "Vue", "Angular", "Svelte", "Alpine.js", "Ember.js", "Blazor", "Laravel", "Django"],
+		installation: "install @tailwindcss/ui",
 	},
 	{
 		brand: "Flowbite",
@@ -41,6 +47,17 @@ export const libraries = [
 		logo: FlowbiteLogo,
 		premiumAccess: true,
 		frameworkCompatibility: ["React", "Next", "Vue", "Angular", "Svelte", "Alpine.js", "Ember.js", "Blazor", "Laravel", "Django"],
+		install: "install flowbite",
+	},
+	{
+		brand: "Flowbite React",
+		url: "https://flowbite.com/react",
+		description: `Flowbite React is a free Open Source UI Kit that provides
+        a flexible and extensible starting point for new projects.`,
+		logo: FlowbiteLogo,
+		premiumAccess: false,
+		frameworkCompatibility: ["React", "Next"],
+		install: "install flowbite-react",
 	},
 	{
 		brand: "DaisyUI",
@@ -50,6 +67,34 @@ export const libraries = [
 		logo: DaisyUILogo,
 		premiumAccess: false,
 		frameworkCompatibility: ["React", "Next", "Vue", "Angular", "Svelte", "Alpine.js", "Ember.js", "Blazor", "Laravel", "Django"],
+		install: "install daisyui",
+	},
+	{
+		brand: "R Suite JS",
+		url: "https://rsuitejs.com",
+		description: `A suite of React components, sensible UI design, and a friendly development experience.`,
+		logo: ReactSuiteLogo,
+		premiumAccess: false,
+		frameworkCompatibility: ["React", "Next"],
+		install: "install rsuite",
+	},
+	{
+		brand: "Hyper UI",
+		url: "https://hyperui.dev",
+		description: `Hyper UI is a collection of beautiful and free components built with Tailwind CSS.`,
+		logo: HyperUILogo,
+		premiumAccess: false,
+		frameworkCompatibility: ["React", "Next", "Vue", "Angular", "Svelte", "Alpine.js", "Ember.js", "Blazor", "Laravel", "Django"],
+		install: "install hyper-ui",
+	},
+	{
+		brand: "Tailspark",
+		url: "https://tailspark.co",
+		description: `Tailspark is a collection of free and open source UI components and elements built with Tailwind CSS.`,
+		logo: TailsparkLogo,
+		premiumAccess: false,
+		frameworkCompatibility: ["React", "Next", "Vue", "Angular", "Svelte", "Alpine.js", "Ember.js", "Blazor", "Laravel", "Django"],
+		install: "install tailspark",
 	},
 	{
 		brand: "Tailwind Elements",
@@ -59,6 +104,7 @@ export const libraries = [
 		logo: TailwindElementsLogo,
 		premiumAccess: false,
 		frameworkCompatibility: ["React", "Next", "Vue", "Angular", "Svelte", "Alpine.js", "Ember.js", "Blazor", "Laravel", "Django"],
+		install: "install tailwind-elements",
 	},
 	{
 		brand: "Shadcn",
@@ -68,6 +114,16 @@ export const libraries = [
 		logo: ShadCnLogo,
 		premiumAccess: false,
 		frameworkCompatibility: ["React", "Next", "Vue", "Angular", "Svelte", "Alpine.js", "Ember.js", "Blazor", "Laravel", "Django"],
+		install: "install shadcn",
+	},
+	{
+		brand: "Sweet Alert 2",
+		url: "https://sweetalert2.github.io",
+		description: `A beautiful, responsive, customizable, accessible (WAI-ARIA) replacement for JavaScript's popup boxes.`,
+		logo: SweetAlertLogo,
+		premiumAccess: false,
+		frameworkCompatibility: ["React", "Next", "Vue", "Angular", "Svelte", "Alpine.js", "Ember.js", "Blazor", "Laravel", "Django"],
+		install: "install sweetalert2",
 	},
 	{
 		brand: "React Select",
@@ -76,29 +132,7 @@ export const libraries = [
 		logo: ReactSelectLogo,
 		premiumAccess: false,
 		frameworkCompatibility: ["React", "Next"],
-	},
-	{
-		brand: "R Suite JS",
-		url: "https://rsuitejs.com",
-		description: `A suite of React components, sensible UI design, and a friendly development experience.`,
-		logo: ReactSuiteLogo,
-		premiumAccess: false,
-		frameworkCompatibility: ["React", "Next"],
-	},
-	{
-		brand: "Flowbite React",
-		url: "https://flowbite.com/react",
-		description: `Flowbite React is a free Open Source UI Kit that provides
-        a flexible and extensible starting point for new projects.`,
-		logo: FlowbiteLogo,
-		premiumAccess: false,
-	},
-	{
-		brand: "Hyper UI",
-		url: "https://hyperui.dev",
-		description: `Hyper UI is a collection of beautiful and free components built with Tailwind CSS.`,
-		logo: HyperUILogo,
-		premiumAccess: false,
+		install: "install react-select",
 	},
 ]
 
@@ -145,6 +179,12 @@ export const iconLibraries = [
 		url: "https://iconscout.com",
 		description: `Iconscout is powered by community of passionate designers to get high quality icons. You can find icons for any project from 2 million+ icons.`,
 		logo: IconScoutLogo,
+	},
+	{
+		brand: "Icon Finder",
+		url: "https://iconfinder.com",
+		description: `Iconfinder is the world's largest marketplace for vector and raster icons in SVG and PNG formats.`,
+		logo: IconFinderLogo,
 	},
 ]
 

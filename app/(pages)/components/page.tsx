@@ -3,14 +3,17 @@ import { use, useState } from "react"
 import Link from "next/link"
 import { formatCapitalizeAllWords } from "@/app/functions/capitalize"
 import FilterBox from "@/app/app_Components/filterBox"
+import { Carousel } from "flowbite-react"
+import Test from "./test"
 
 // icons
 import { GoDotFill } from "react-icons/go"
 
 const links = ["button", "checkbox", "input", "modal", "navbar", "radio", "select", "table", "toast", "toggle", "tooltip", "mode selector"]
 
-export default function Components() {
+export default function Components({ children }: any) {
 	const [pickedInputType, setPickedInputType] = useState("")
+	const [navbarOpen, setNavbarOpen] = useState(false)
 	const [libFilters, setLibFilters] = useState([
 		"tailwind",
 		"tailwindUI",
@@ -23,68 +26,76 @@ export default function Components() {
 
 	return (
 		<>
-			<h1 className="text-4xl text-center pb-10">Component Collection</h1>
-			<div className="flex items-start justify-between w-full h-auto  gap-4 min-h-screen">
-				<section id="left-nav" className="flex flex-col items-start bg-zinc-300 rounded-lg h-screen w-fit p-6">
-					<h2 className="text-3xl text-left p-1 font-bold text-teal-600">Components</h2>
-					<ul className="flex flex-col items-start justify-between text-xl text-zinc-700 gap-4 pt-7 w-full ">
-						{links.map((link) => {
-							const formattedlink = formatCapitalizeAllWords(link)
-							return (
-								<li key={formattedlink} className="w-full group ml-6 pr-4">
-									<button
-										onClick={() => setPickedInputType(formattedlink)}
-										className="h-full  w-full text-left  rounded p-2 text-xl duration-300 transition-all">
-										<span
-											className={`${
-												pickedInputType === formattedlink
-													? "text-teal-500 font-semibold -ml-6"
-													: "group-hover:text-teal-600 group-hover:font-semibold"
-											} whitespace-nowrap flex items-center gap-1`}>
-											{pickedInputType === formattedlink && (
-												<span className="text-teal-400/20">
-													<GoDotFill />
-												</span>
-											)}
-											{formattedlink}
-										</span>
-									</button>
-								</li>
-							)
-						})}
-					</ul>
-				</section>
-
-				<div className="flex flex-col gap-6 w-full">
-					<FilterBox filters={libFilters} setFilters={setLibFilters} library="components" />
-					<section
-						id="component-display"
-						className="flex flex-col w-full justify-between bg-zinc-200 rounded-lg items-start h-auto">
-						<div className="flex flex-col items-start h-screen px-6 py-2 w-full">
-							<div className="flex  justify-between w-full items-center ">
-								<p className="text-3xl text-left py-5 w-fit whitespace-nowrap">
-									Components:{" "}
-									<span className="text-zinc-400">
-										{pickedInputType ? pickedInputType : "Viewing All"}
-										{pickedInputType ? (pickedInputType === "Checkbox" ? "'s" : "s") : ""}
-									</span>
+			<h1 className="pb-10 text-4xl text-center">Component Collection</h1>
+			<div className="grid min-h-screen grid-cols-1 lg:grid-cols-12">
+				{navbarOpen && (
+					<section id="left-nav" className="flex flex-col items-start px-6 pt-10 rounded-lg box w-fi lg:col-span-3 bg-zinc-100">
+						<h2 className="p-1 text-3xl font-bold text-left text-teal-600">Components</h2>
+						<ul className="flex flex-col items-start justify-between w-full gap-4 text-xl text-zinc-700 pt-7">
+							{links.map((link) => {
+								const formattedlink = formatCapitalizeAllWords(link)
+								return (
+									<li key={formattedlink} className="w-full pr-4 ml-6 group">
+										<button
+											onClick={() => setPickedInputType(formattedlink)}
+											className="w-full h-full p-2 text-xl text-left transition-all duration-300 rounded">
+											<span
+												className={`${
+													pickedInputType === formattedlink
+														? "text-teal-500 font-semibold -ml-6"
+														: "group-hover:text-teal-600 group-hover:font-semibold"
+												} whitespace-nowrap flex items-center gap-1`}>
+												{pickedInputType === formattedlink && (
+													<span className="text-teal-400/20">
+														<GoDotFill />
+													</span>
+												)}
+												{formattedlink}
+											</span>
+										</button>
+									</li>
+								)
+							})}
+						</ul>
+					</section>
+				)}
+				<section
+					id="component-display"
+					className={`${navbarOpen ? "" : "lg:col-span-12"} flex flex-col items-start w-full gap-6 pl-6 lg:grid lg:col-span-9`}>
+					<div className="flex flex-col items-start w-full overflow-hidden rounded-lg box">
+						{/* Filter Box */}
+						<FilterBox filters={libFilters} setFilters={setLibFilters} library="components" />
+						{/* Conponent / Code View */}
+						<div className="flex flex-col items-start w-full px-6 py-2 mt-4 rounded-lg bg-zinc-200">
+							<div className="flex items-center justify-between w-full ">
+								<p className="pt-2 pb-5 text-3xl text-left w-fit whitespace-nowrap">
+									Components: <span className="text-zinc-400">{pickedInputType || "Viewing All"}</span>
+									{pickedInputType ? (pickedInputType === "Checkbox" ? "'s" : "s") : ""}
 								</p>
 								{pickedInputType && (
 									<button
 										onClick={() => setPickedInputType("")}
-										className={` text-zinc-900 rounded-lg p-2 h-fit align-center bg-zinc-100 hover:bg-zinc-50 hover:text-teal-500 px-3`}>
+										className="p-2 px-3 rounded-lg text-zinc-900 h-fit align-center bg-zinc-100 hover:bg-zinc-50 hover:text-teal-500">
 										View All
 									</button>
 								)}
 							</div>
-							<div className=" w-full">
+							<div className="w-full">
 								<hr className="w-full border-lime-600" />
 							</div>
-							<ul className="flex flex-col items-start"></ul>
+
+							{/* Render your Test component */}
+							<Test
+								library="components"
+								component={pickedInputType ? pickedInputType.toLowerCase() : "all"}
+								filters={libFilters}
+							/>
 						</div>
-					</section>
-				</div>
+					</div>
+				</section>
 			</div>
 		</>
 	)
 }
+
+
