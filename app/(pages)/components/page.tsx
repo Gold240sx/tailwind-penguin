@@ -13,7 +13,7 @@ const links = ["button", "checkbox", "input", "modal", "navbar", "radio", "selec
 
 export default function Components({ children }: any) {
 	const [pickedInputType, setPickedInputType] = useState("")
-	const [navbarOpen, setNavbarOpen] = useState(false)
+	const [navbarOpen, setNavbarOpen] = useState(true)
 	const [libFilters, setLibFilters] = useState([
 		"tailwind",
 		"tailwindUI",

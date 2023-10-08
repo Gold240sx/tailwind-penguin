@@ -3,6 +3,7 @@ import "./globals.css"
 import "../node_modules/highlight.js/styles/stackoverflow-light.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Head from "next/head"
 
 export const dynamic = "force-dynamic"
 const inter = Inter({ subsets: ["latin"] })
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 	title: "Tailwind Penguin",
 	description: "Components and Asset and Reference Library - Combined library of Tailwind focused assets and code-bites",
 }
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (

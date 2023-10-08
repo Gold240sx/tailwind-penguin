@@ -1,8 +1,9 @@
 "use client"
-import { use, useState } from "react"
+import React, { use, useState, useEffect } from "react"
 import Link from "next/link"
 import { formatCapitalizeAllWords } from "@/app/functions/capitalize"
 import FilterBox from "@/app/app_Components/filterBox"
+import ComponentLoader from "./avtest"
 
 // icons
 import { GoDotFill } from "react-icons/go"
@@ -11,72 +12,65 @@ import { iconLibraries, libraries } from "@/app/context/libraries"
 const links = ["button", "checkbox", "input", "modal", "navbar", "radio", "select", "table", "toast", "toggle", "tooltip", "mode selector"]
 
 export default function Avatars() {
-	const [pickedInputType, setPickedInputType] = useState("")
-	const [libFilters, setLibFilters] = useState([""])
+	const [componentData, setComponentData] = useState(null)
+
+	useEffect(() => {
+		const mockComponentData = {
+			components: [
+				{
+					name: "inputcard",
+					library: "flowbite-react",
+					code: `<form className="flex flex-col max-w-md gap-4">
+      <div>
+        <div className="block mb-2">
+          <Label
+            htmlFor="email1"
+            value="Your email"
+          />
+        </div>
+        <TextInput
+          id="email1"
+          placeholder="name@flowbite.com"
+          required
+          type="email"
+        />
+      </div>
+      <div>
+        <div className="block mb-2">
+          <Label
+            htmlFor="password1"
+            value="Your password"
+          />
+        </div>
+        <TextInput
+          id="password1"
+          required
+          type="password"
+        />
+      </div>
+      <div className="flex items-center gap-2">
+        <Checkbox id="remember" />
+        <Label htmlFor="remember">
+          Remember me
+        </Label>
+      </div>
+      <Button type="submit">
+        Submit
+      </Button>
+    </form>`,
+					dependencies: ["Card", "TextInput", "Checkbox", "Button", "Label", "Alert", "Datepicker"], // Import the dependencies from the module
+				},
+			],
+		}
+		setComponentData(mockComponentData)
+	}, [])
 
 	return (
 		<>
-			<h1 className="text-4xl text-center pb-10">Avatar Collections</h1>
-			<div className="flex items-start justify-between w-full h-auto  gap-4 min-h-screen">
-				<section id="left-nav" className="flex flex-col items-start bg-zinc-300 rounded-lg h-screen w-fit p-6">
-					<h2 className="text-3xl text-left p-1 font-bold text-teal-600">Avatars</h2>
-					<ul className="flex flex-col items-start justify-between text-xl text-zinc-700 gap-4 pt-7 w-full ">
-						{links.map((link) => {
-							const formattedlink = formatCapitalizeAllWords(link)
-							return (
-								<li key={formattedlink} className="w-full group ml-6 pr-4">
-									<button
-										onClick={() => setPickedInputType(formattedlink)}
-										className="h-full  w-full text-left  rounded p-2 text-xl duration-300 transition-all">
-										<span
-											className={`${
-												pickedInputType === formattedlink
-													? "text-teal-500 font-semibold -ml-6"
-													: "group-hover:text-teal-600 group-hover:font-semibold"
-											} whitespace-nowrap flex items-center gap-1`}>
-											{pickedInputType === formattedlink && (
-												<span className="text-teal-400/20">
-													<GoDotFill />
-												</span>
-											)}
-											{formattedlink}
-										</span>
-									</button>
-								</li>
-							)
-						})}
-					</ul>
-				</section>
-
-				<div className="flex flex-col gap-6 w-full">
-					<FilterBox filters={libFilters} setFilters={setLibFilters} library="avatars" />
-					<section
-						id="component-display"
-						className="flex flex-col w-full justify-between bg-zinc-200 rounded-lg items-start h-auto">
-						<div className="flex flex-col items-start h-screen px-6 py-2 w-full">
-							<div className="flex  justify-between w-full items-center ">
-								<p className="text-3xl text-left py-5 w-fit whitespace-nowrap">
-									Components:{" "}
-									<span className="text-zinc-400">
-										{pickedInputType ? pickedInputType : "Viewing All"}
-										{pickedInputType ? (pickedInputType === "Checkbox" ? "'s" : "s") : ""}
-									</span>
-								</p>
-								{pickedInputType && (
-									<button
-										onClick={() => setPickedInputType("")}
-										className={` text-zinc-900 rounded-lg p-2 h-fit align-center bg-zinc-100 hover:bg-zinc-50 hover:text-teal-500 px-3`}>
-										View All
-									</button>
-								)}
-							</div>
-							<div className=" w-full">
-								<hr className="w-full border-lime-600" />
-							</div>
-							<ul className="flex flex-col items-start"></ul>
-						</div>
-					</section>
-				</div>
+			<h1 className="pb-10 text-4xl text-center">Avatar Collections</h1>
+			<div className="flex items-start justify-between w-full h-auto min-h-screen gap-4 text-black">
+				{componentData &&
+					componentData.components.map((component) => <ComponentLoader key={component.name} componentData={component} />)}
 			</div>
 		</>
 	)
