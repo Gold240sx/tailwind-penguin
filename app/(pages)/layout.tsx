@@ -1,6 +1,6 @@
 // import { createServerComponentClient } from "@supabase/supabase-js"
-import Navbar from "@/app/app_Components/nav"
-import Footer from "../app_Components/footer/Footer"
+import Navbar from '../app_components/nav'
+import Footer from '../app_components/footer/Footer'
 import { useState } from "react"
 import { cookies } from "next/headers"
 import { cache } from "react"

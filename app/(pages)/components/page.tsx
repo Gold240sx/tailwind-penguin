@@ -1,8 +1,8 @@
 "use client"
 import { use, useState } from "react"
 import Link from "next/link"
-import { formatCapitalizeAllWords } from "@/app/functions/capitalize"
-import FilterBox from "@/app/app_Components/filterBox"
+import { formatCapitalizeAllWords } from '../../functions/capitalize'
+import FilterBox from '../../app_components/filterBox'
 import { Carousel } from "flowbite-react"
 import Test from "./test"
 
