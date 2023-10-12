@@ -21,10 +21,11 @@ import TailsparkFullLogo from '../assets/logos/TailsparkFull-logo.jpg'
 import IconFinderLogo from '../assets/logos/iconFinder-logo.webp'
 import SweetAlertLogo from '../assets/logos/sweetAlert-logo.png'
 import PinesUILogo from '../assets/logos/pinesUI-logo.png'
+import NextUILogo from '../assets/logos/nextUI-logo.png'
 
 export const libraries = [
   {
-    brand: 'Tailwind CSS',
+    brand: 'Tailwind',
     url: 'https://tailwindcss.com',
     description: `Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.`,
     logo: TailwindLogo,
@@ -165,6 +166,14 @@ export const libraries = [
     install: 'install tailspark'
   },
   {
+    brand: 'Pines UI',
+    url: 'https://devdojo.com/pines',
+    description: `Pines is a library of animations, sliders, tooltips, accordions, modals, and more! It's a set of UI elements that can be copy and pasted into any Alpine and Tailwind projects.`,
+    logo: PinesUILogo,
+    premiumAccess: false,
+    frameworkCompatibility: ['Alpine.js']
+  },
+  {
     brand: 'Tailwind Elements',
     url: 'https://tailwind-elements.com',
     description: `Tailwind Elements is a collection of over 100 free and open source
@@ -207,42 +216,42 @@ export const libraries = [
     install: 'install shadcn'
   },
   {
-    brand: 'Sweet Alert 2',
-    url: 'https://sweetalert2.github.io',
-    description: `A beautiful, responsive, customizable, accessible (WAI-ARIA) replacement for JavaScript's popup boxes.`,
-    logo: SweetAlertLogo,
+    brand: 'Next UI',
+    url: 'https://nextui.org/docs/guide/introduction',
+    description: `Beautiful, fast and modern React UI library.`,
+    logo: NextUILogo,
     premiumAccess: false,
-    frameworkCompatibility: [
-      'React',
-      'Next',
-      'Vue',
-      'Angular',
-      'Svelte',
-      'Alpine.js',
-      'Ember.js',
-      'Blazor',
-      'Laravel',
-      'Django'
-    ],
-    install: 'install sweetalert2'
-  },
-  {
-    brand: 'Pines UI',
-    url: 'https://devdojo.com/pines',
-    description: `Pines is a library of animations, sliders, tooltips, accordions, modals, and more! It's a set of UI elements that can be copy and pasted into any Alpine and Tailwind projects.`,
-    logo: PinesUILogo,
-    premiumAccess: false,
-    frameworkCompatibility: ['Alpine.js']
-  },
-  {
-    brand: 'React Select',
-    url: 'https://react-select.com',
-    description: `React Select is a flexible and beautiful Select Input control for ReactJS with multiselect, autocomplete, async and creatable support.`,
-    logo: ReactSelectLogo,
-    premiumAccess: false,
-    frameworkCompatibility: ['React', 'Next'],
-    install: 'install react-select'
+    frameworkCompatibility: ['React.js', 'Next.js', 'Remix', 'Astro']
   }
+  //   {
+  //     brand: 'Sweet Alert 2',
+  //     url: 'https://sweetalert2.github.io',
+  //     description: `A beautiful, responsive, customizable, accessible (WAI-ARIA) replacement for JavaScript's popup boxes.`,
+  //     logo: SweetAlertLogo,
+  //     premiumAccess: false,
+  //     frameworkCompatibility: [
+  //       'React',
+  //       'Next',
+  //       'Vue',
+  //       'Angular',
+  //       'Svelte',
+  //       'Alpine.js',
+  //       'Ember.js',
+  //       'Blazor',
+  //       'Laravel',
+  //       'Django'
+  //     ],
+  //     install: 'install sweetalert2'
+  //   },
+  //   {
+  //     brand: 'React Select',
+  //     url: 'https://react-select.com',
+  //     description: `React Select is a flexible and beautiful Select Input control for ReactJS with multiselect, autocomplete, async and creatable support.`,
+  //     logo: ReactSelectLogo,
+  //     premiumAccess: false,
+  //     frameworkCompatibility: ['React', 'Next'],
+  //     install: 'install react-select'
+  //   }
 ]
 
 export const iconLibraries = [

@@ -4,28 +4,32 @@
 
 @base {
     .resizable-container {
-  display: flex;
-  flex-direction: row; /* Horizontal layout */
-  overflow: hidden; /* Hide content that overflows */
-  position: relative;
-}
+        display: flex;
+        flex-direction: row; /* Horizontal layout */
+        overflow: hidden; /* Hide content that overflows */
+        position: relative;
+    }
 
-*{
-    user-select: none;
-}
+    *{
+        user-select: none;
+    }
 
-.main-content {
-  flex: 1; /* Main content takes up available space */
-  /* Your existing styles for main-content */
-}
+    .main-content {
+        flex: 1; /* Main content takes up available space */
+        /* Your existing styles for main-content */
+    }
 
-.resizable-divider {
-  width: 10px; /* Width of the divider */
-  cursor: col-resize; /* Display resize cursor */
-  background-color: #ddd; /* Divider color */
-  z-index: 1; /* Place above other content */
-  /* You can add more styles like padding, margin, etc. */
-}
+    .resizable-divider {
+        width: 10px; /* Width of the divider */
+        cursor: col-resize; /* Display resize cursor */
+        background-color: #ddd; /* Divider color */
+        z-index: 1; /* Place above other content */
+        /* You can add more styles like padding, margin, etc. */
+    }
+     /* .code-wrapper a, 
+        .code-wrapper Link {
+        pointer-events: none !important;
+    } */
 }
 
 @layer utilities {
@@ -43,10 +47,6 @@
           -ms-overflow-style: none;  /* IE and Edge */
           scrollbar-width: none;  /* Firefox */
       }
-    }
-
-    .codeView {
-        /* padding: 8px; */
     }
 
     .codeView::after {
