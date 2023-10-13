@@ -7,6 +7,7 @@ A library of libraries, Tailwind Penguin is the place to store all your favorite
 If you ever wanted a singular place to find the exact component that you're looking for as well as store favorites, save info on your favorite projects ( computers folder location, gitnub repo, etc), and code snippets. This project seeks to seve that purpose and be the goto place for all your coding needs.
 
 Addidional benefits include:
+- Live Preview of components and component code
 - Tailwind Focused.
 - Quick access to copy and paste code snippets. (formatted for minimal effort). 
 - Searchable by numerous parameters.
