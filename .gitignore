@@ -45,7 +45,9 @@ next-env.d.ts
 app/context/Libraries/Tailwind/ApplicationUI/Elements/buttons.tsx
 app/context/Libraries/Tailwind/ApplicationUI/Elements/buttonGroups.tsx
 app/context/Libraries/Tailwind/ApplicationUI/Overlays/slideovers.tsx
+app/context/Libraries/Tailwind/ApplicationUI/Elements/avatarsPremium.tsx
 app/context/Libraries/Tailwind/ApplicationUI/Overlays/modalsPremium.tsx
+app/context/Libraries/Tailwind/ApplicationUI/Overlays/slideoversPremium.tsx
 
 
 
