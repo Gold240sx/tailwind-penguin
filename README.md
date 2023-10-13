@@ -21,3 +21,7 @@ Addidional benefits include:
 // in app/context/Libraries/index.tsx
 remove all references to "premiumContent"
 These items have been removed in order to comply with the terms of their usage.
+
+```bash
+    npm install
+```
