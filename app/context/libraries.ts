@@ -22,6 +22,7 @@ import IconFinderLogo from '../assets/logos/iconFinder-logo.webp'
 import SweetAlertLogo from '../assets/logos/sweetAlert-logo.png'
 import PinesUILogo from '../assets/logos/pinesUI-logo.png'
 import NextUILogo from '../assets/logos/nextUI-logo.png'
+import AnimatedIconsLogo from '../assets/logos/animatedIcons-logo.jpg'
 
 export const libraries = [
   {
@@ -255,55 +256,61 @@ export const libraries = [
 ]
 
 export const iconLibraries = [
-	{
-		brand: "Font Awesome",
-		url: "https://fontawesome.com",
-		description: `Get vector icons and social logos on your website with Font Awesome, the web's most popular icon set and toolkit.`,
-		logo: FontAwesomeLogo,
-		premiumAccess: true,
-	},
-	{
-		brand: "Hero Icons",
-		url: "https://heroicons.com",
-		description: `Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.`,
-		logo: HeroIconLogo,
-	},
-	{
-		brand: "React Icons",
-		url: "https://react-icons.github.io/react-icons",
-		description: `Include popular icons in your React projects easily with react-icons, which utilizes ES6 imports that allows you to include only the icons that your project is using.`,
-		logo: ReactIconLogo,
-	},
-	{
-		brand: "Google Icons",
-		url: "https://fonts.google.com/icons",
-		description: `Google's Material Design icons, with several different icon packs available.`,
-		logo: GoogleIconLogo,
-	},
-	{
-		brand: "Material Design Icons",
-		url: "https://materialdesignicons.com",
-		description: `Material Design Icons' growing icon collection allows designers and developers targeting various platforms to download icons in the format, color and size they need for any project.`,
-		logo: MaterialIconLogo,
-	},
-	{
-		brand: "Lordicon",
-		url: "https://lordicon.com",
-		description: `Lordicon is a free library of animated icons. You can easily customize colors, stroke width, play direction, loop, and speed with a few clicks.`,
-		logo: LordIconLogo,
-	},
-	{
-		brand: "Icon Scout",
-		url: "https://iconscout.com",
-		description: `Iconscout is powered by community of passionate designers to get high quality icons. You can find icons for any project from 2 million+ icons.`,
-		logo: IconScoutLogo,
-	},
-	{
-		brand: "Icon Finder",
-		url: "https://iconfinder.com",
-		description: `Iconfinder is the world's largest marketplace for vector and raster icons in SVG and PNG formats.`,
-		logo: IconFinderLogo,
-	},
+  {
+    brand: 'Font Awesome',
+    url: 'https://fontawesome.com',
+    description: `Get vector icons and social logos on your website with Font Awesome, the web's most popular icon set and toolkit.`,
+    logo: FontAwesomeLogo,
+    premiumAccess: true
+  },
+  {
+    brand: 'Hero Icons',
+    url: 'https://heroicons.com',
+    description: `Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.`,
+    logo: HeroIconLogo
+  },
+  {
+    brand: 'Animated Icons',
+    url: 'https://animatedicons.co',
+    description: `Animated Icons is a set of icons that are designed to be animated. These icons are perfect for any project you have.`,
+    logo: AnimatedIconsLogo
+  },
+  {
+    brand: 'React Icons',
+    url: 'https://react-icons.github.io/react-icons',
+    description: `Include popular icons in your React projects easily with react-icons, which utilizes ES6 imports that allows you to include only the icons that your project is using.`,
+    logo: ReactIconLogo
+  },
+  {
+    brand: 'Google Icons',
+    url: 'https://fonts.google.com/icons',
+    description: `Google's Material Design icons, with several different icon packs available.`,
+    logo: GoogleIconLogo
+  },
+  {
+    brand: 'Material Design Icons',
+    url: 'https://materialdesignicons.com',
+    description: `Material Design Icons' growing icon collection allows designers and developers targeting various platforms to download icons in the format, color and size they need for any project.`,
+    logo: MaterialIconLogo
+  },
+  {
+    brand: 'Lordicon',
+    url: 'https://lordicon.com',
+    description: `Lordicon is a free library of animated icons. You can easily customize colors, stroke width, play direction, loop, and speed with a few clicks.`,
+    logo: LordIconLogo
+  },
+  {
+    brand: 'Icon Scout',
+    url: 'https://iconscout.com',
+    description: `Iconscout is powered by community of passionate designers to get high quality icons. You can find icons for any project from 2 million+ icons.`,
+    logo: IconScoutLogo
+  },
+  {
+    brand: 'Icon Finder',
+    url: 'https://iconfinder.com',
+    description: `Iconfinder is the world's largest marketplace for vector and raster icons in SVG and PNG formats.`,
+    logo: IconFinderLogo
+  }
 ]
 
 export const fontLibraries = [

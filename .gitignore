@@ -41,4 +41,11 @@ next-env.d.ts
 *.map
 *.tgz
 
+# Premium content
+app/context/Libraries/Tailwind/ApplicationUI/Elements/buttons.tsx
+app/context/Libraries/Tailwind/ApplicationUI/Elements/buttonGroups.tsx
+app/context/Libraries/Tailwind/ApplicationUI/Overlays/slideovers.tsx
+
+
+
 

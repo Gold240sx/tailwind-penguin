@@ -23,7 +23,8 @@ const links = [
   'toast',
   'toggle',
   'tooltip',
-  'mode selector'
+  'mode selector',
+  'pill'
 ]
 const defaultFilters = [
   'tailwind',

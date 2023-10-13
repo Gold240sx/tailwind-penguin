@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss'
 import Highlight from "react-highlight"
 
+
+
 const config: Config = {
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
