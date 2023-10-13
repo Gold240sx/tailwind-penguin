@@ -1,35 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tailwind Penguin
 
-## Getting Started
+## Tagline: 
+A library of libraries, Tailwind Penguin is the place to store all your favorite code snippets, components, and projects and find new favorites from all the best libraries.
 
-First, run the development server:
+## Why was this developed:
+If you ever wanted a singular place to find the exact component that you're looking for as well as store favorites, save info on your favorite projects ( computers folder location, gitnub repo, etc), and code snippets. This project seeks to seve that purpose and be the goto place for all your coding needs.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Addidional benefits include:
+- Tailwind Focused.
+- Quick access to copy and paste code snippets. (formatted for minimal effort). 
+- Searchable by numerous parameters.
+- Save your favorite code snippets.
+- filter by libraries, component type, and more.
+- Store info on the details and progress of your current projects (don't forget about them and finally finish them!)
+- 100% free and open source.
+- Animations -Icons - WebFonts - Regex - Classes - Images - packages
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# tailwind-penguin
+## To get it running:
+// in app/context/Libraries/index.tsx
+remove all references to "premiumContent"
+These items have been removed in order to comply with the terms of their usage.
