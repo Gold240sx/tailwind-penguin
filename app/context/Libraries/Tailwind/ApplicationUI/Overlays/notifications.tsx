@@ -1,4 +1,5 @@
 //  PREMIUM CONTENT - TAILWIND UI
+// notiification
 import { TailwindInstall } from '../../index'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
@@ -17,8 +18,8 @@ export {}
 // const Test:ComponentData = {
 //   componentName: 'Simple',
 //   tags: ['dropdown', 'select', 'input', 'menu'],
-//   library: 'Tailwind',
-//   type: 'dropdown',
+//   library: 'Tailwind UI',
+//   type: 'notification',
 //   favorite: false,
 //   darkMode: false,
 //   installation: {

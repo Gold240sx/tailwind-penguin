@@ -30,6 +30,10 @@ export type ComponentData = {
     Ember?: string
     Nest?: string
   }
+  state?: {
+    React?: string
+    Vue?: string
+  }
   installation?: {
     React?: string
     Vue?: string

@@ -1,3 +1,4 @@
+// pill
 import { TailwindInstall } from '../../index'
 import { type ComponentData } from '../../../types'
 
