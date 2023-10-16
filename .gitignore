@@ -41,11 +41,15 @@ next-env.d.ts
 *.map
 *.tgz
 
+CodeResources.md
+
 # Premium content
 app/context/Libraries/Tailwind/ApplicationUI/Elements/buttons.tsx
 app/context/Libraries/Tailwind/ApplicationUI/Elements/buttonGroups.tsx
 app/context/Libraries/Tailwind/ApplicationUI/Overlays/slideovers.tsx
 app/context/Libraries/Tailwind/ApplicationUI/Elements/avatarsPremium.tsx
+app/context/Libraries/Tailwind/ApplicationUI/Elements/badgesPremium.tsx
+app/context/Libraries/Tailwind/ApplicationUI/Elements/dropdownsPremium.tsx
 app/context/Libraries/Tailwind/ApplicationUI/Overlays/modalsPremium.tsx
 app/context/Libraries/Tailwind/ApplicationUI/Overlays/slideoversPremium.tsx
 

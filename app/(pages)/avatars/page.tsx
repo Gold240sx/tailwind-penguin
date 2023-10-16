@@ -66,14 +66,27 @@ export default function Avatars() {
 		setComponentData(mockComponentData)
 	}, [])
 
-	return (
-		<>
-			<h1 className="pb-10 text-4xl text-center">Avatar Collections</h1>
-			<div className="flex items-start justify-between w-full h-auto min-h-screen gap-4 text-black">
+    var Iframe = (props: { src: string }) => {
+      return (
+        <div className="w-full h-auto">
+          {/* <iframe src={src} style={{ width: (`${width}px`, 100%) }} /> */}
+          <iframe
+            src={props.src}
+            style={{ width: '100%', height: 'fit-content' }}
+          />
+        </div>
+      )
+    }
+
+    return (
+      <>
+        <h1 className="pb-10 text-4xl text-center">Avatar Collections</h1>
+        {/* <div className="flex items-start justify-between w-full h-auto min-h-screen gap-4 text-black">
 				<Monoco />
 				{componentData &&
 					componentData.components.map((component) => <ComponentLoader key={component.name} componentData={component} />)}
-			</div>
-		</>
-	)
+			</div> */}
+        <Iframe src="http://tailwindcss.com/" />
+      </>
+    )
 }
